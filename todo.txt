@@ -1,0 +1,35 @@
+handle payements
+
+improve ui and ux
+
+
+
+
+
+
+
+
+
+pyuic5 -x UI/ui/gui.ui -o UI/PY/gui.py
+
+pyuic5 -x UI/ui/teacher_card.ui -o UI/PY/teacher_card.py
+pyuic5 -x UI/ui/student_card.ui -o UI/PY/student_card.py
+pyuic5 -x UI/ui/class_card.ui -o UI/PY/class_card.py
+
+pyuic5 -x UI/ui/cam_widget.ui -o UI/PY/cam_widget.py
+pyuic5 -x UI/ui/classroom_list.ui -o UI/PY/classroom_list.py
+pyuic5 -x UI/ui/subjects_list.ui -o UI/PY/subjects_list.py
+pyuic5 -x UI/ui/cam_widget.ui -o UI/PY/cam_widget.py
+pyuic5 -x UI/ui/time_management.ui -o UI/PY/time_management.py
+
+
+
+
+pyuic5 -x UI/ui/teacher_add_form.ui -o UI/PY/teacher_add_form.py
+pyuic5 -x UI/ui/teacher_edit_form.ui -o UI/PY/teacher_edit_form.py
+pyuic5 -x UI/ui/student_add_form.ui -o UI/PY/student_add_form.py
+pyuic5 -x UI/ui/student_edit_form.ui -o UI/PY/student_edit_form.py
+pyuic5 -x UI/ui/class_add_form.ui -o UI/PY/class_add_form.py
+pyuic5 -x UI/ui/class_edit_form.ui -o UI/PY/class_edit_form.py
+pyuic5 -x UI/ui/user_add_form.ui -o UI/PY/user_add_form.py
+pyuic5 -x UI/ui/user_edit_form.ui -o UI/PY/user_edit_form.py

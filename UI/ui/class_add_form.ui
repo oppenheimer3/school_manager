@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>class_add_form</class>
+ <widget class="QWidget" name="class_add_form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>749</width>
+    <height>982</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+background-color:rgb(36, 31, 49);
+color:rgb(255, 255, 255);
+font-size:15px
+}
+            QPushButton {
+                background-color: rgb(61, 56, 70);
+                color:rgb(255, 255, 255);
+                border: none;
+                padding: 8px 16px;
+                border-radius: 4px;
+					font-size:20px
+            }
+            QPushButton:hover {
+                background-color:rgb(192, 191, 188);
+					color:black;
+            }
+QPushButton:disabled {
+    background-color: rgb(222, 221, 218); /* Change the disabled color as desired */
+}
+QToolButton:pressed {
+    background-color: rgb(153, 193, 241);  /* Change the pressed color as desired */
+}
+            QToolButton {
+                background-color: rgb(53, 132, 228);
+                color:black;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 4px;
+            }
+            QToolButton:hover {
+                background-color:rgb(246, 245, 244);
+					color:black;
+            }
+QToolButton:disabled {
+    background-color: rgb(222, 221, 218); /* Change the disabled color as desired */
+}
+QPushButton:pressed {
+    background-color: rgb(153, 193, 241);  /* Change the pressed color as desired */
+}
+
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="13" column="0">
+    <widget class="QLabel" name="label_11">
+     <property name="text">
+      <string>Salary:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>Day:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="label_7">
+     <property name="text">
+      <string>End time:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Subject:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0">
+    <widget class="QLabel" name="label_10">
+     <property name="text">
+      <string>Teacher's payement:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Level:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_8">
+     <property name="text">
+      <string>Year:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>Start time:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0">
+    <widget class="QLabel" name="label_12">
+     <property name="text">
+      <string>Session Price</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="label_9">
+     <property name="text">
+      <string>Monthly Price:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>Classroom:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Teacher:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QTimeEdit" name="end_time_input"/>
+   </item>
+   <item row="6" column="1">
+    <widget class="QTimeEdit" name="start_time_input"/>
+   </item>
+   <item row="14" column="1">
+    <widget class="QPushButton" name="add_button">
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color:rgb(61, 56, 70);
+	
+	color: rgb(255, 255, 255);
+	font-size: 20px
+
+}
+
+QPushButton:hover {
+    background-color: rgb(119, 118, 123);  /* Change the hover color as desired */
+}
+
+QPushButton:pressed {
+    background-color: rgb(192, 191, 188);  /* Change the pressed color as desired */
+}
+
+QPushButton:disabled {
+    background-color: rgb(222, 221, 218); /* Change the disabled color as desired */
+}</string>
+     </property>
+     <property name="text">
+      <string> Add</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../icons/ok.png</normaloff>../../icons/ok.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="2">
+    <widget class="QPushButton" name="Cancel_button">
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color:rgb(61, 56, 70);
+	
+	color: rgb(255, 255, 255);
+	font-size: 20px
+
+}
+
+QPushButton:hover {
+    background-color: rgb(119, 118, 123);  /* Change the hover color as desired */
+}
+
+QPushButton:pressed {
+    background-color: rgb(192, 191, 188);  /* Change the pressed color as desired */
+}
+
+QPushButton:disabled {
+    background-color: rgb(222, 221, 218); /* Change the disabled color as desired */
+}</string>
+     </property>
+     <property name="text">
+      <string> Cancel</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../icons/cancel.png</normaloff>../../icons/cancel.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="1" colspan="2">
+    <widget class="QLineEdit" name="salary_input">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="1" colspan="2">
+    <widget class="QComboBox" name="teachers_payement_combobox"/>
+   </item>
+   <item row="9" column="1" colspan="2">
+    <widget class="QLineEdit" name="session_price_input">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1" colspan="2">
+    <widget class="QLineEdit" name="price_input">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1" colspan="2">
+    <widget class="QComboBox" name="day_combobox"/>
+   </item>
+   <item row="4" column="1" colspan="2">
+    <widget class="QComboBox" name="classroom_combobox"/>
+   </item>
+   <item row="3" column="1" colspan="2">
+    <widget class="QComboBox" name="teacher_combobox"/>
+   </item>
+   <item row="2" column="1" colspan="2">
+    <widget class="QComboBox" name="subject_combobox"/>
+   </item>
+   <item row="1" column="1" colspan="2">
+    <widget class="QComboBox" name="year_combobox"/>
+   </item>
+   <item row="0" column="1" colspan="2">
+    <widget class="QComboBox" name="level_combobox"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

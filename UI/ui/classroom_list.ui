@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>classroom_list</class>
+ <widget class="QWidget" name="classroom_list">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>620</width>
+    <height>570</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+background-color:rgb(36, 31, 49);
+color:rgb(255, 255, 255);
+font-size:15px
+}
+            QPushButton {
+                background-color: rgb(61, 56, 70);
+                color:rgb(255, 255, 255);
+                border: none;
+                padding: 8px 16px;
+                border-radius: 4px;
+					font-size:20px
+            }
+            QPushButton:hover {
+                background-color:rgb(192, 191, 188);
+					color:black;
+            }
+QPushButton:disabled {
+    background-color: rgb(222, 221, 218); /* Change the disabled color as desired */
+}
+QToolButton:pressed {
+    background-color: rgb(153, 193, 241);  /* Change the pressed color as desired */
+}
+            QToolButton {
+                background-color: rgb(53, 132, 228);
+                color:black;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 4px;
+            }
+            QToolButton:hover {
+                background-color:rgb(246, 245, 244);
+					color:black;
+            }
+QToolButton:disabled {
+    background-color: rgb(222, 221, 218); /* Change the disabled color as desired */
+}
+QPushButton:pressed {
+    background-color: rgb(153, 193, 241);  /* Change the pressed color as desired */
+}
+
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="1" rowspan="5">
+    <widget class="QTableView" name="classroom_table">
+     <property name="styleSheet">
+      <string notr="true">QTableView {
+    background-color: transparent; /* Make the background transparent */
+    border: 1px solid #CCCCCC; /* Add a subtle border */
+    border-radius: 10px; /* Round the corners */
+    gridline-color: transparent; /* Make grid lines transparent */
+    selection-background-color: #007ACC; /* Selection background color */
+    selection-color: #FFFFFF; /* Selection text color */
+    alternate-background-color: #F0F0F0; /* Alternate row background color */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+QHeaderView::section {
+	  font-weight: bold;
+	background-color: rgb(36, 31, 49);
+    color: rgb(255, 255, 255); /* Header text color */
+    padding: 6px; /* Add padding to header sections */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Round the header corners */
+}
+
+QTableView::item {
+    padding: 8px; /* Add padding to table items */
+}
+
+</string>
+     </property>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QToolButton" name="delete_button">
+     <property name="styleSheet">
+      <string notr="true">            QToolButton{
+                background-color: rgb(237, 51, 59)
+            }
+            QToolButton:hover {
+                background-color: rgb(246, 245, 244)
+            }
+QToolButton:pressed {
+    background-color: rgb(246, 97, 81);  /* Change the pressed color as desired */
+}
+QToolButton:disabled {
+    background-color: rgb(222, 221, 218); /* Change the disabled color as desired */
+}</string>
+     </property>
+     <property name="text">
+      <string>...</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../icons/delete_.png</normaloff>../../icons/delete_.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QToolButton" name="add_button">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>...</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../icons/add.png</normaloff>../../icons/add.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TeacherCard</class>
+ <widget class="QWidget" name="TeacherCard">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>881</width>
+    <height>901</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QWidget{
+background-color: rgb(36, 31, 49);
+color:white;
+font-size:15px;
+font-family: &quot;Century Gothic&quot;;
+
+}
+
+            QToolButton {
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 4px;
+            }
+            QToolButton:hover {
+                background-color: rgb(246, 245, 244);
+            }
+QToolButton:disabled {
+    background-color: rgb(222, 221, 218); /* Change the disabled color as desired */
+}
+QToolButton:pressed {
+    background-color: rgb(153, 193, 241);  /* Change the pressed color as desired */
+}
+
+QTableView {
+    background-color: transparent; /* Make the background transparent */
+    border: 1px solid #CCCCCC; /* Add a subtle border */
+    border-radius: 10px; /* Round the corners */
+    gridline-color: transparent; /* Make grid lines transparent */
+    selection-background-color: #007ACC; /* Selection background color */
+    selection-color: #FFFFFF; /* Selection text color */
+    alternate-background-color: #F0F0F0; /* Alternate row background color */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+QHeaderView::section {
+	  font-weight: bold;
+	background-color: rgb(36, 31, 49);
+    color: rgb(255, 255, 255); /* Header text color */
+    padding: 6px; /* Add padding to header sections */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Round the header corners */
+}
+
+QTableView::item {
+    padding: 8px; /* Add padding to table items */
+}
+
+
+
+QScrollBar:vertical {
+    border: none; /* Remove vertical scroll bar border */
+    background: #F0F0F0; /* Scroll bar background color */
+    width: 10px; /* Scroll bar width */
+}
+
+QScrollBar::handle:vertical {
+    background: #007ACC; /* Scroll bar handle color */
+    min-height: 20px; /* Scroll bar handle minimum height */
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical,
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: none; /* Remove scroll bar buttons background */
+}
+
+
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabs">
+     <property name="styleSheet">
+      <string notr="true">QTabBar::tab:hover {
+	background-color:  rgb(68, 132, 233);
+	color:rgb(0, 0, 0)
+}
+            QTabWidget::pane {
+                border: 1px solid #ccc;
+                background-color: white;
+            }
+            QTabWidget::tab-bar {
+                alignment: center;
+            }
+            QTabBar::tab {
+                background: rgb(255, 255, 255);
+                color: #333;
+                border: 1px solid #ccc;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+                padding: 8px;
+                min-width: 100px;
+            }
+            QTabBar::tab:selected {
+                background:rgba(238, 233, 233, 155);
+                border-bottom-color: white;
+            }
+</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <widget class="QWidget" name="info_tab">
+      <attribute name="icon">
+       <iconset>
+        <normaloff>../../icons/info.png</normaloff>../../icons/info.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Info</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="1">
+        <widget class="QStackedWidget" name="info_stacked_widget">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="info_widget">
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="1" column="0" colspan="2">
+            <widget class="QWidget" name="widget" native="true">
+             <property name="styleSheet">
+              <string notr="true">background-color:rgb(94, 92, 100)</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_4">
+              <item row="0" column="0">
+               <layout class="QVBoxLayout" name="labels_layout"/>
+              </item>
+              <item row="0" column="1">
+               <layout class="QVBoxLayout" name="info_layout"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Classes:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" rowspan="2" colspan="4">
+            <widget class="QTableView" name="tableView">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="editTriggers">
+              <set>QAbstractItemView::NoEditTriggers</set>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
+             </property>
+             <attribute name="horizontalHeaderDefaultSectionSize">
+              <number>270</number>
+             </attribute>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="2">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Teacher Info:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="3">
+            <widget class="QToolButton" name="payement_button">
+             <property name="text">
+              <string>...</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../icons/payment.png</normaloff>../../icons/payment.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="payement_widget">
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="1" column="4">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Total salary this month:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QCheckBox" name="generate_bill_checkbox">
+             <property name="text">
+              <string>generate bill</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QToolButton" name="bill_button">
+             <property name="text">
+              <string>...</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../icons/add_records.png</normaloff>../../icons/add_records.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="5">
+            <widget class="QLabel" name="total_label">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" colspan="5">
+            <widget class="QTableView" name="teacher_payement_tableview">
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="sizeAdjustPolicy">
+              <enum>QAbstractScrollArea::AdjustToContents</enum>
+             </property>
+             <property name="editTriggers">
+              <set>QAbstractItemView::NoEditTriggers</set>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
+             </property>
+             <attribute name="horizontalHeaderDefaultSectionSize">
+              <number>200</number>
+             </attribute>
+             <attribute name="horizontalHeaderStretchLastSection">
+              <bool>true</bool>
+             </attribute>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QToolButton" name="return_button">
+             <property name="text">
+              <string>...</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../icons/return.png</normaloff>../../icons/return.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StudentCard</class>
+ <widget class="QWidget" name="StudentCard">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1091</width>
+    <height>807</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	background-color:rgb(36, 31, 49);
+color:rgb(255, 255, 255);
+font-size:15px
+}
+            QPushButton {
+                background-color: rgb(61, 56, 70);
+                color:rgb(255, 255, 255);
+                border: none;
+                padding: 8px 16px;
+                border-radius: 4px;
+					font-size:20px
+            }
+            QPushButton:hover {
+                background-color:rgb(192, 191, 188);
+					color:black;
+            }
+QPushButton:disabled {
+    background-color: rgb(222, 221, 218); /* Change the disabled color as desired */
+}
+QToolButton:pressed {
+    background-color: rgb(153, 193, 241);  /* Change the pressed color as desired */
+}
+            QToolButton {
+                background-color: rgb(53, 132, 228);
+                color:black;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 4px;
+            }
+            QToolButton:hover {
+                background-color:rgb(246, 245, 244);
+					color:black;
+            }
+QToolButton:disabled {
+    background-color: rgb(222, 221, 218); /* Change the disabled color as desired */
+}
+QPushButton:pressed {
+    background-color: rgb(153, 193, 241);  /* Change the pressed color as desired */
+}
+
+QTableView {
+    background-color: transparent; /* Make the background transparent */
+    border: 1px solid #CCCCCC; /* Add a subtle border */
+    border-radius: 10px; /* Round the corners */
+    gridline-color: transparent; /* Make grid lines transparent */
+    selection-background-color: #007ACC; /* Selection background color */
+    selection-color: #FFFFFF; /* Selection text color */
+    alternate-background-color: #F0F0F0; /* Alternate row background color */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+QHeaderView::section {
+	  font-weight: bold;
+	background-color: rgb(36, 31, 49);
+    color: rgb(255, 255, 255); /* Header text color */
+    padding: 6px; /* Add padding to header sections */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Round the header corners */
+}
+
+QTableView::item {
+    padding: 8px; /* Add padding to table items */
+}
+
+
+
+QScrollBar:vertical {
+    border: none; /* Remove vertical scroll bar border */
+    background: #F0F0F0; /* Scroll bar background color */
+    width: 10px; /* Scroll bar width */
+}
+
+QScrollBar::handle:vertical {
+    background: #007ACC; /* Scroll bar handle color */
+    min-height: 20px; /* Scroll bar handle minimum height */
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical,
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: none; /* Remove scroll bar buttons background */
+}
+
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabs">
+     <property name="styleSheet">
+      <string notr="true">QTabBar::tab:hover {
+	background-color:  rgb(68, 132, 233);
+	color:rgb(0, 0, 0)
+}
+            QTabWidget::pane {
+                border: 1px solid #ccc;
+                background-color: white;
+            }
+            QTabWidget::tab-bar {
+                alignment: center;
+            }
+            QTabBar::tab {
+                background: rgb(255, 255, 255);
+                color: #333;
+                border: 1px solid #ccc;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+                padding: 8px;
+                min-width: 100px;
+            }
+            QTabBar::tab:selected {
+                background:rgba(238, 233, 233, 155);
+                border-bottom-color: white;
+            }
+</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="info">
+      <attribute name="title">
+       <string>Info</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_8">
+       <item row="1" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Student info:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" rowspan="2">
+        <widget class="QWidget" name="widget" native="true">
+         <property name="styleSheet">
+          <string notr="true">background-color:rgb(119, 118, 123)</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="1">
+           <layout class="QVBoxLayout" name="info_layout"/>
+          </item>
+          <item row="0" column="0">
+           <layout class="QVBoxLayout" name="labels_layout"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="4" column="3">
+        <widget class="QToolButton" name="view_button">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../icons/QR.png</normaloff>../../icons/QR.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLabel" name="label_3">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(36, 31, 49);</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" colspan="3">
+        <widget class="QLabel" name="qr_code_label">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="classes_tab">
+      <attribute name="title">
+       <string>Classes</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QStackedWidget" name="info_stacked_widget">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <widget class="QWidget" name="info_widget">
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <widget class="QToolButton" name="delete_class_button">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">            QToolButton{
+                background-color: rgb(237, 51, 59)
+            }
+            QToolButton:hover {
+                background-color: rgb(246, 245, 244)
+            }
+QToolButton:pressed {
+    background-color: rgb(246, 97, 81);  /* Change the pressed color as desired */
+}
+QToolButton:disabled {
+    background-color: rgb(222, 221, 218); /* Change the disabled color as desired */
+}</string>
+             </property>
+             <property name="text">
+              <string>...</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../icons/delete_.png</normaloff>../../icons/delete_.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QToolButton" name="class_payement_button">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>...</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../icons/payment.png</normaloff>../../icons/payment.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QToolButton" name="add_class_button">
+             <property name="text">
+              <string>...</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../icons/add.png</normaloff>../../icons/add.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" rowspan="6" colspan="2">
+            <widget class="QTableView" name="student_class_table">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);
+color:rgb(11, 11, 11)</string>
+             </property>
+             <property name="editTriggers">
+              <set>QAbstractItemView::NoEditTriggers</set>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
+             </property>
+             <attribute name="horizontalHeaderDefaultSectionSize">
+              <number>270</number>
+             </attribute>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="add_class_widget">
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="0" column="7">
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="8" column="1">
+            <widget class="QToolButton" name="cancel_button">
+             <property name="styleSheet">
+              <string notr="true">            QToolButton {
+                background-color: rgb(61, 56, 70);
+                color: black;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 4px;
+            }
+            QToolButton:hover {
+                background-color: rgb(222, 221, 218);
+            }
+QToolButton:disabled {
+    background-color: rgb(222, 221, 218); /* Change the disabled color as desired */
+}
+QToolButton:pressed {
+    background-color: rgb(153, 193, 241);  /* Change the pressed color as desired */
+}</string>
+             </property>
+             <property name="text">
+              <string>...</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../icons/cancel.png</normaloff>../../icons/cancel.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QToolButton" name="ok_button">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">            QToolButton {
+                background-color: rgb(61, 56, 70);
+                color: black;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 4px;
+            }
+            QToolButton:hover {
+                background-color: rgb(222, 221, 218);
+            }
+QToolButton:disabled {
+    background-color: rgb(222, 221, 218); /* Change the disabled color as desired */
+}
+QToolButton:pressed {
+    background-color: rgb(153, 193, 241);  /* Change the pressed color as desired */
+}</string>
+             </property>
+             <property name="text">
+              <string>...</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../icons/ok.png</normaloff>../../icons/ok.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QToolButton" name="search_button">
+             <property name="text">
+              <string>...</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../icons/search.png</normaloff>../../icons/search.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="search_input">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" rowspan="5" colspan="11">
+            <widget class="QTableView" name="classes_table">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
+             </property>
+             <attribute name="horizontalHeaderDefaultSectionSize">
+              <number>270</number>
+             </attribute>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="class_payement_widget">
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="2" rowspan="3">
+            <widget class="QTableView" name="class_payement_tableview">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="editTriggers">
+              <set>QAbstractItemView::NoEditTriggers</set>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QToolButton" name="return_button">
+             <property name="text">
+              <string>...</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../icons/return.png</normaloff>../../icons/return.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QStackedWidget" name="payement_stackedWidget">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="page">
+              <layout class="QGridLayout" name="gridLayout_9">
+               <item row="0" column="0">
+                <widget class="QToolButton" name="update_payement_button">
+                 <property name="text">
+                  <string>...</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>../../icons/records.png</normaloff>../../icons/records.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>30</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="page_2">
+              <layout class="QGridLayout" name="gridLayout_7">
+               <item row="1" column="1" colspan="5">
+                <widget class="QRadioButton" name="by_session">
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string>by session</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1" colspan="5">
+                <widget class="QLineEdit" name="value_input">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1" colspan="5">
+                <widget class="QRadioButton" name="by_month">
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string>by month</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="1">
+                <widget class="QCheckBox" name="generate_bill_checkbox">
+                 <property name="text">
+                  <string>generate bill</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="3">
+                <widget class="QToolButton" name="cancelupdate_button">
+                 <property name="styleSheet">
+                  <string notr="true">            QToolButton{
+                background-color: rgb(237, 51, 59)
+            }
+            QToolButton:hover {
+                background-color: rgb(246, 245, 244)
+            }
+QToolButton:pressed {
+    background-color: rgb(246, 97, 81);  /* Change the pressed color as desired */
+}
+QToolButton:disabled {
+    background-color: rgb(222, 221, 218); /* Change the disabled color as desired */
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>...</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>../../icons/cancel.png</normaloff>../../icons/cancel.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>30</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="2">
+                <widget class="QToolButton" name="update_button">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string>...</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>../../icons/ok.png</normaloff>../../icons/ok.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>30</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

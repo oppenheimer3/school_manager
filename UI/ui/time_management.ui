@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>time_management</class>
+ <widget class="QWidget" name="time_management">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1644</width>
+    <height>875</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+background-color:rgb(36, 31, 49);
+color:rgb(255, 255, 255);
+font-size:15px
+}
+            QPushButton {
+                background-color: rgb(61, 56, 70);
+                color:rgb(255, 255, 255);
+                border: none;
+                padding: 8px 16px;
+                border-radius: 4px;
+					font-size:20px
+            }
+            QPushButton:hover {
+                background-color:rgb(192, 191, 188);
+					color:black;
+            }
+QPushButton:disabled {
+    background-color: rgb(222, 221, 218); /* Change the disabled color as desired */
+}
+QToolButton:pressed {
+    background-color: rgb(153, 193, 241);  /* Change the pressed color as desired */
+}
+            QToolButton {
+                background-color: rgb(53, 132, 228);
+                color:black;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 4px;
+            }
+            QToolButton:hover {
+                background-color:rgb(246, 245, 244);
+					color:black;
+            }
+QToolButton:disabled {
+    background-color: rgb(222, 221, 218); /* Change the disabled color as desired */
+}
+QPushButton:pressed {
+    background-color: rgb(153, 193, 241);  /* Change the pressed color as desired */
+}
+QTableView {
+    background-color: transparent; /* Make the background transparent */
+    border: 1px solid #CCCCCC; /* Add a subtle border */
+    border-radius: 10px; /* Round the corners */
+    gridline-color: transparent; /* Make grid lines transparent */
+    selection-background-color: #007ACC; /* Selection background color */
+    selection-color: #FFFFFF; /* Selection text color */
+    alternate-background-color: #F0F0F0; /* Alternate row background color */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+QHeaderView::section {
+	  font-weight: bold;
+	background-color: rgb(36, 31, 49);
+    color: rgb(255, 255, 255); /* Header text color */
+    padding: 6px; /* Add padding to header sections */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Round the header corners */
+}
+
+QTableView::item {
+    padding: 8px; /* Add padding to table items */
+}
+
+
+
+</string>
+  </property>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>1641</width>
+     <height>851</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>200</number>
+   </attribute>
+   <attribute name="horizontalHeaderStretchLastSection">
+    <bool>true</bool>
+   </attribute>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="verticalHeaderDefaultSectionSize">
+    <number>100</number>
+   </attribute>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
